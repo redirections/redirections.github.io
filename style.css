@@ -182,3 +182,16 @@ h3 {
   text-transform: uppercase;
   animation: shake 100000s infinite alternate;
 }
+
+h4 {
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 24rem;
+  font-weight: 200;
+  font-style: italic;
+  color: purple;
+  padding: 4rem 6rem 5.5rem;
+  border: 0.4rem solid red;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  animation: shake 100000s infinite alternate;
+}
