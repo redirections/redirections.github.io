@@ -175,10 +175,10 @@ h3 {
   font-size: 13rem;
   font-weight: 200;
   font-style: italic;
-  color: orange;
+  color: cyan;
   padding: 4rem 6rem 5.5rem;
   border: 0.4rem solid green;
-  border-radius: 2rem;
+  border-radius: 1rem;
   text-transform: uppercase;
   animation: shake 100000s infinite alternate;
 }
