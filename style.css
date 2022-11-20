@@ -1,0 +1,183 @@
+html {
+background:#171717;
+color:white;
+}
+
+:root {
+  /* Base font size */
+  font-size: 20%;   
+  
+  /* Set neon color */
+  --neon-text-color: #f40;
+  --neon-border-color: #08f;
+}
+
+body {
+	text-align:center;
+    opacity: 1;
+    transition: 1s opacity;
+  font-family: 'Exo 2', sans-serif;
+  display: block;	
+
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+        h2 {
+         font-size: 1000%; 
+            -webkit-animation-duration: 1s;
+            -webkit-animation-name: slidein;
+
+       
+            -moz-animation-duration: 1s;
+            -moz-animation-name: slidein;
+
+        
+            -o-animation-duration: 1s;
+            -o-animation-name: slidein;
+
+      
+            animation-duration: 1s;
+            animation-name: slidein;
+        }
+
+        @-webkit-keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 100%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+
+        @-moz-keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 100%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+         @-o-keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 100%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+          @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 100%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+		
+
+h1 {
+    position: relative;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: calc(20px + 5vw);
+    font-weight: 700;
+    color: red;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.15em #blue;
+    white-space: nowrap;
+    filter: blur(0em);
+    animation: shake 1s linear forwards;
+}
+
+h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    -webkit-clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+            clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+}
+
+h1::before,
+h1::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+h1::before {
+    animation: crack1 2.5s linear forwards;
+    -webkit-clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+}
+
+h1::after {
+    animation: crack2 2.5s linear forwards;
+    -webkit-clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+            clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+}
+
+@keyframes shake {
+    5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
+        transform: translateY(0.0em) rotate(0deg);
+    }
+
+    10%, 30%, 40%, 50%, 70%, 80%, 90% {
+   
+        transform: translateY(0em) rotate(0deg);
+    }
+
+	    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow:
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 6rem var(--neon-text-color),
+            0 0 8rem var(--neon-text-color),
+            0 0 10rem var(--neon-text-color);
+        
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);        
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }  
+}
+
+h3 {
+  font-size: 13rem;
+  font-weight: 200;
+  font-style: italic;
+  color: orange;
+  padding: 4rem 6rem 5.5rem;
+  border: 0.4rem solid green;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  animation: shake 100000s infinite alternate;
+}
